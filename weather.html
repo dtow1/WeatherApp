@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather.css">
+    
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script><!-- Tether for Bootstrap --> 
+    
+    
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/apidata.php"></script>
+    <script>useZip(14886)</script>
+        
+    </head>
+    <body>
+        
+        <div class="container-fluid allcontent">
+            <div class="row">
+                <div class="col-sm-12">
+                <h1 class="headings">My Weather App</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                <h2 class="headings">As of Chrome v.50 the automatic location detection will not work. Please use another browers or the Zip code feature.</h2>
+                </div>
+            </div>
+            
+            <div class="row" id="output">
+                <div class="col-sm-3 col-sm-offset-2 box" id="descrip">
+
+                </div>
+                <div class="col-sm-3 box">
+                    <span id="temp"></span><span id="scale"></span><span id="icon"></span>
+                </div>
+                <div class="col-sm-3 box" id="location">
+
+                </div>  
+            </div>
+            
+            <div class="row offset">
+                <div class="col-sm-3">
+                <form>
+                    <fieldset class="form-group">
+                    <textarea class="form-control" id="zipcodetext" rows="1" placeholder="Enter Zip Code" maxlength="5" width="48"></textarea>
+                    </fieldset>
+
+                </form>
+                </div>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-inverse bg-dark" id="getzip">Submit Zip Code</button>
+                    <button onclick="useCoords()" class="btn btn-inverse bg-dark">Use Device Location</button>
+                    <button onclick="toggleTemp()" class="btn btn-inverse bg-dark">Toggle &deg;F &deg;C</button>
+                </div>
+            </div>
+
+    </body>
+</html>
